@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Nordic";
+  src: url("fonts/Norse-Bold.woff2");
+}
+
+@font-face {
+  font-family: 'Exo2';
+  src: url('fonts/Exo2-Regular.woff2');
+}
+
 /* CSS Resets */
 * {
   padding: 0;
@@ -7,10 +17,11 @@
 
 /* Variable Declaration */
 :root {
-  --text-color: rgb(245, 245, 245);
-  --bg-color: #000209;
+  --text-color: rgb(8, 8, 8);
+  --bg-color: #ececec;
   --secondar-bg-color: rgb(53, 53, 53);
-  --accent-color: rgb(0, 50, 214);
+  --accent-color: #0028ee;
+  --standard-gap: 40px;
 }
 
 /* Main Tag Changes */
@@ -18,11 +29,13 @@ body {
   display: flex;
   background-color: var(--bg-color);
   color: var(--text-color);
-
+  background-color: var(--bg-color);
+  font-family: 'Exo2';
+  font-weight: bold;
 }
 
 a {
-  color: var(--text-color);
+  color: white;
   font-weight: bold;
   text-shadow: 3px 3px 4px black;
 }
@@ -34,13 +47,25 @@ img {
 
 input {
   border-radius: 3px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   padding: 5px;
   width: 100%;
 }
 
 input:focus {
   box-shadow: 2px 2px 3px 1px black;
+}
+
+button {
+  background: var(--accent-color);
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  margin: var(--standard-gap);
+  color: white;
+  box-shadow: 3px 2px 5px grey;
 }
 
 
@@ -51,16 +76,11 @@ input:focus {
   width: 30vw;
   min-height: 100vh;
   background-image: url("images/japanAlley.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000209), url("images/japanAlley.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   
-}
-
-#odinLogo {
-  filter: invert();
 }
 
 /* Right Content Area */
@@ -71,13 +91,13 @@ input:focus {
 .logo {
   margin-top: 20vh;
   height: 150px;
-  /* background: rgba(255, 255, 255, 0.5); */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.76), #fdfdfd00);
-  color: black;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.80), #fdfdfd00);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  font-family: "Nordic";
 }
 
 .headerTitle {
@@ -87,14 +107,22 @@ input:focus {
 .credit {
   text-align: center;
   margin: 20px;
+  color: white;
 }
 
 .formContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: rgba(255, 255, 255, 0.20);
-  padding: 40px;
+  background: #FEFEFE;
+  color: black;
+  padding: var(--standard-gap);
+  box-shadow: 3px 0px 5px grey;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 fieldset {
@@ -103,7 +131,7 @@ fieldset {
 
 .fieldRow {
   display: flex;
-  gap: 20px;
+  gap: var(--standard-gap);
 }
 
 .formOption {
@@ -117,10 +145,28 @@ min-width: 300px;
 
 .heroText {
   font-size: 28px;
-  margin: 40px;
+  margin: var(--standard-gap);
   margin-top: 10vh;
 }
 
 .heroText > p {
   padding: 20px 0;
+}
+
+.loginContainer {
+  margin: 0 var(--standard-gap);
+  font-weight: bold;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.invalid:focus {
+  outline: 1px solid red;
+}
+
+.login {
+  color: var(--accent-color);
+
 }
