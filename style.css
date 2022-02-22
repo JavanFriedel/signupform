@@ -1,0 +1,126 @@
+/* CSS Resets */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variable Declaration */
+:root {
+  --text-color: rgb(245, 245, 245);
+  --bg-color: #000209;
+  --secondar-bg-color: rgb(53, 53, 53);
+  --accent-color: rgb(0, 50, 214);
+}
+
+/* Main Tag Changes */
+body {
+  display: flex;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+}
+
+a {
+  color: var(--text-color);
+  font-weight: bold;
+  text-shadow: 3px 3px 4px black;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid grey;
+  padding: 5px;
+  width: 100%;
+}
+
+input:focus {
+  box-shadow: 2px 2px 3px 1px black;
+}
+
+
+/* Class and ID changes (Left to right, top to bottom) */
+
+/* --Left Header Section */
+.header {
+  width: 30vw;
+  min-height: 100vh;
+  background-image: url("images/japanAlley.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000209), url("images/japanAlley.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+#odinLogo {
+  filter: invert();
+}
+
+/* Right Content Area */
+.content {
+  flex: 1;
+}
+
+.logo {
+  margin-top: 20vh;
+  height: 150px;
+  /* background: rgba(255, 255, 255, 0.5); */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.76), #fdfdfd00);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.headerTitle {
+  font-size: 80px
+}
+
+.credit {
+  text-align: center;
+  margin: 20px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.20);
+  padding: 40px;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldRow {
+  display: flex;
+  gap: 20px;
+}
+
+.formOption {
+  display: flex;
+  flex-direction: column;
+}
+
+.formOption > input {
+min-width: 300px;
+}
+
+.heroText {
+  font-size: 28px;
+  margin: 40px;
+  margin-top: 10vh;
+}
+
+.heroText > p {
+  padding: 20px 0;
+}
